@@ -22,7 +22,7 @@ typedef struct {
 
 } intVec;
 
-intVec* intVec_malloc(size_t n_elm);
+intVec* intVec_malloc(int n_elm);
 void intVec_free(intVec* v);
 intVec* intVec_append(intVec* v, int elm);
 intVec* intVec_cut(intVec* v);

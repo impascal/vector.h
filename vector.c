@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include "vector.h"
 
-intVec* intVec_malloc(size_t n_elm) {   
+intVec* intVec_malloc(int n_elm) {   
+    if(n_elm < 0) {
+        puts("Impossible to create array with negative lenght.\n");
+        return NULL;
+    }
 
     intVec* v = (intVec*) malloc(sizeof(intVec));
     if(v == NULL) {
